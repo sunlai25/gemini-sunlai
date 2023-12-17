@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeminiAI </title>
+</head>
+<body>
+    <h1>GeminiAI 测试应用</h1>
+    <form method="post" action="/">
+        <label for="input_text">输入文本：</label>
+        <input type="text" id="input_text" name="input_text" required>
+        <button type="submit">生成</button>
+    </form>
+    
+    {% if response %}
+        <div>
+            <h2>gemini的回复：</h2>
+            {{ response|safe }}
+        </div>
+    {% endif %}
+</body>
+</html>
