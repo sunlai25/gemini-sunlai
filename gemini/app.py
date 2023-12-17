@@ -13,7 +13,7 @@ app = Flask(__name__)
 # 配置和生成内容的函数，使用生成模型
 def generate_content(input_text):
     # 在这里使用你的API密钥
-    GOOGLE_API_KEY = environ['AIzaSyBqSlrgiceS7Y6yD6bMz-Tr10nADNJ0aaw']
+    GOOGLE_API_KEY = environ['使用你自己的key']
     genai.configure(api_key=GOOGLE_API_KEY)
     model = genai.GenerativeModel('gemini-pro')
     response = model.generate_content(input_text)
@@ -34,7 +34,7 @@ def index():
 
     return render_template('index.html', response="请在上面提出问题，并执行。")
 
-ngrok_token = "2ZU4hG9IXqjR27I0WuI6t4ArqtS_4WGMfyYbN7nmZLCAQJwMF"
+ngrok_token = "使用你自己的key"
 # 设置ngrok身份验证令牌
 ngrok.set_auth_token(ngrok_token)
 port = 5000 
